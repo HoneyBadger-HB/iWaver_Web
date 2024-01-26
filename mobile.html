@@ -3,6 +3,11 @@
 
 <body style="margin: 0;">
     <!-- mobile -->
+    <header class="header-button">
+        <img class="logo" src="pc/Logo.png" alt="로고 이미지">
+        <button class="downloadButton" onclick="downloadFile()">앱 다운로드</button>
+    </header>
+
     <div class="mobile title">
         <div class="inner-container">
             <div class="img-container">
@@ -39,14 +44,79 @@
                 <img class="gif gif_05 shadow" src="/gif/231127_iWaver_gif_05-min.gif">
             </div>
 
-            <img class="img" alt="한번 경험해보면 재사용률 100%" src="m/07_end.png">
+            <div class="img-container">
+                <img class="img" alt="한번 경험해보면 재사용률 100%" src="m/07_body.png">
+                <img class="img" alt="당신이 원하는 자료를 무한의 캔버스에 한 번에" src="m/08_body.png">
+            </div>
+
+            <div class="img-container">
+                <div class = "footer-image-text">
+                    <img class="img" alt="footer" src="m/09_end.png">
+                    <div class="footer_text">
+                        <p>이메일: honeybadger.ada@gmail.com</p>
+                        <a href="https://github.com/HoneyBadger-HB/iWaver_Web">서비스 이용약관</a>
+                        <a href="https://github.com/HoneyBadger-HB/iWaver_Web">개인정보 처리방침</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
 
+    <script>
+        function downloadFile() {
+          var downloadLink = document.createElement("a");
+          //downloadLink.href = "메가스터디 스마트러닝.png"; // 다운로드할 파일의 경로와 이름
+          //downloadLink.download =  "메가스터디 스마트러닝.png"; // 다운로드될 파일의 이름
+          downloadLink.href = "iWaver(Beta).dmg"; // 다운로드할 파일의 경로와 이름
+          downloadLink.download = "iWaver(Beta).dmg"; // 다운로드될 파일의 이름
+          downloadLink.click();
+        }
+      </script>
 </body>
 
 <style>
+     .header-button {
+        position: sticky;
+        top: 0px; /* 도달했을때 고정시킬 위치 */
+        display: flex; 
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; /* 이미지와 로고를 좌우로 중앙에 배치 */
+
+        background-color: white;
+        text-align: center;
+        height: 80px;
+        z-index: 10;
+        padding: 0 30%; /* 좌우에 적절한 패딩을 주기 위해 설정 */
+    }
+
+    .logo {
+        width: 120px;
+        margin-right: 30%;
+    }
+
+    .downloadButton {
+        font-family: "Pretendard-Bold";
+        background-color: rgba(90, 129, 250, 1.0);
+        color: white;
+        border: none;
+        padding: 9px 20px;
+        width: 122px; /* 버튼의 너비를 150px로 고정 */
+        border-radius: 6px;
+    }
+
+    @font-face {
+        font-family: 'Pretendard-Light';
+        src: url('./font/Pretendard-Light.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Pretendard-Bold';
+        src: url('./font/Pretendard-Bold.ttf') format('truetype');
+    }
+
     .mobile .img-container {
         position: relative;
         font-size: 0px;
@@ -97,6 +167,34 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 88%;
+    }
+
+    .footer-image-text {
+        position: relative;
+    }
+
+    .footer_text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: translate( -50%, -50% );
+        color: white;
+        opacity: 0.8;
+        text-align: center;
+        font-family: "Pretendard-Light";
+        font-size: 24px;
+    }
+
+    .footer_text p, .footer_text a {
+        margin-bottom: 50px; /* 요소들 사이의 간격을 조정하고 싶다면 값을 조정해주세요 */
+    }
+
+    .footer_text a {
+        text-decoration: none; /* 링크의 밑줄을 삭제합니다 */
+        color: white; /* 링크의 텍스트 색상을 흰색으로 변경합니다 */
     }
 </style>
 
