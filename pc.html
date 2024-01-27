@@ -91,7 +91,7 @@
         text-align: center;
         height: 80px;
         z-index: 10;
-        padding: 0 30%; /* 좌우에 적절한 패딩을 주기 위해 설정 */
+        padding: 0 30%; 
     }
 
     .logo {
@@ -105,8 +105,10 @@
         color: white;
         border: none;
         padding: 9px 20px;
-        width: 122px; /* 버튼의 너비를 150px로 고정 */
+        width: 122px;
+        height: 39px;
         border-radius: 6px;
+        white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     }
 
     @font-face {
@@ -193,16 +195,38 @@
         font-family: "Pretendard-Medium";
         font-size: 18px;
         font-weight: 500;
+        white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     }
 
     .footer_text p, .footer_text a {
-        margin-right: 100px; /* 요소들 사이의 간격을 조정하고 싶다면 값을 조정해주세요 */
+        margin-right: 5.2%; /* 요소들 사이의 간격을 조정하고 싶다면 값을 조정해주세요 */
     }
 
     .footer_text a {
         text-decoration: none; /* 링크의 밑줄을 삭제합니다 */
         color: white; /* 링크의 텍스트 색상을 흰색으로 변경합니다 */
     }
+
+    /* PC (해상도 1024px)*/
+    @media all and(min-width: 1024px){
+	.footer_text {
+        font-size: 18px;
+        }
+    }
+    /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+    @media all and (min-width:768px) and (max-width:1023px) {
+	.footer_text {
+        font-size: 13px;
+        }
+    }
+
+    /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+    @media all and (max-width:767px) {
+        .footer_text {
+            font-size: 10px;
+        }
+    }
+
 </style>
 
 </html>
