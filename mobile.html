@@ -3,9 +3,9 @@
 
 <body style="margin: 0;">
     <!-- mobile -->
-    <header class="header-button">
+    <header class="header">
         <img class="logo" src="pc/Logo.png" alt="로고 이미지">
-        <button class="downloadButton" onclick="downloadFile()">앱 다운로드</button>
+        <p class="header-text">PC에서 다운받을 수 있어요</p>
     </header>
 
     <div class="mobile title">
@@ -62,21 +62,10 @@
         </div>
 
     </div>
-
-    <script>
-        function downloadFile() {
-          var downloadLink = document.createElement("a");
-        //   downloadLink.href = "00_header.png"; // 다운로드할 파일의 경로와 이름
-        //   downloadLink.download =  "00_header.png"; // 다운로드될 파일의 이름
-          downloadLink.href = "iWaver(Beta).dmg"; // 다운로드할 파일의 경로와 이름
-          downloadLink.download = "iWaver(Beta).dmg"; // 다운로드될 파일의 이름
-          downloadLink.click();
-        }
-      </script>
 </body>
 
 <style>
-     .header-button {
+     .header {
         position: sticky;
         top: 0px; /* 도달했을때 고정시킬 위치 */
         display: flex; 
@@ -90,6 +79,8 @@
         height: 112px;
         z-index: 10;
         padding: 0 10%; /* 좌우에 적절한 패딩을 주기 위해 설정 */
+
+        border-bottom: solid 1px rgba(242, 243, 245, 1.0);
     }
 
     .logo {
@@ -97,14 +88,14 @@
         /* margin-right: 49%; */
     }
 
-    .downloadButton {
+    .header-text {
         font-family: "Pretendard-Bold";
         font-size: 20px;
-        background-color: rgba(90, 129, 250, 1.0);
-        color: white;
+        background-color: rgba(90, 129, 250, 0.15);
+        color: rgba(90, 129, 250, 1.0);
         border: none;
         padding: 9px 20px;
-        width: 132px; /* 버튼의 너비를 150px로 고정 */
+        width: 254px;
         border-radius: 6px;
         white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     }
