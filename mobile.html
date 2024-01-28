@@ -53,9 +53,9 @@
                 <div class = "footer-image-text">
                     <img class="img" alt="footer" src="m/09_end.png">
                     <div class="footer_text">
-                        <p>이메일: honeybadger.ada@gmail.com</p>
-                        <a href="https://github.com/HoneyBadger-HB/iWaver_Web">서비스 이용약관</a>
-                        <a href="https://github.com/HoneyBadger-HB/iWaver_Web">개인정보 처리방침</a>
+                        <a href="https://mail.google.com/mail/?view=cm&to=honeybadger.ada@gmail.com" target="_blank">이메일: honeybadger.ada@gmail.com</a>
+                        <a href="https://github.com/HoneyBadger-HB/iWaverTermsOfUse.git" target="_blank">서비스 이용약관</a>
+                        <a href="https://github.com/HoneyBadger-HB/iWaverPrivacyPolicy.git" target="_blank">개인정보처리방침</a>
                     </div>
                 </div>
             </div>
@@ -72,42 +72,43 @@
 
         flex-direction: row;
         align-items: center;
-        justify-content: space-between; /* 이미지와 로고를 좌우로 중앙에 배치 */
+        justify-content: space-between;
 
         background-color: white;
         text-align: center;
-        height: 112px;
+        height: 80px;
         z-index: 10;
-        padding: 0 10%; /* 좌우에 적절한 패딩을 주기 위해 설정 */
+        padding: 0 6.6%;
 
         border-bottom: solid 1px rgba(242, 243, 245, 1.0);
     }
 
     .logo {
-        width: 150px;
-        /* margin-right: 49%; */
+        width: 120px;
+        height: 60px;
     }
 
     .header-text {
-        font-family: "Pretendard-Bold";
-        font-size: 20px;
+        font-family: "Pretendard-SemiBold";
+        font-size: 17px;
         background-color: rgba(90, 129, 250, 0.15);
         color: rgba(90, 129, 250, 1.0);
         border: none;
-        padding: 9px 20px;
-        width: 254px;
+        padding: 8px 20px;
+        width: 222px;
+        height: 36px;
         border-radius: 6px;
         white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     }
 
     @font-face {
-        font-family: 'Pretendard-Light';
-        src: url('./font/Pretendard-Light.ttf') format('truetype');
+        font-family: 'Pretendard-SemiBold';
+        src: url('./font/Pretendard-SemiBold.ttf') format('truetype');
     }
 
     @font-face {
-        font-family: 'Pretendard-Bold';
-        src: url('./font/Pretendard-Bold.ttf') format('truetype');
+        font-family: 'Pretendard-Light';
+        src: url('./font/Pretendard-Light.ttf') format('truetype');
     }
 
     .mobile .img-container {
@@ -174,16 +175,14 @@
         top: 50%;
         left: 50%;
         transform: translate( -50%, -50% );
+
         color: white;
         opacity: 0.8;
         text-align: center;
         font-family: "Pretendard-Light";
-        font-size: 24px;
+        font-size: 13px;
         white-space: nowrap; /* 텍스트 줄바꿈 방지 */
-    }
-
-    .footer_text p, .footer_text a {
-        margin-bottom: 50px; /* 요소들 사이의 간격을 조정하고 싶다면 값을 조정해주세요 */
+        gap: 50px;
     }
 
     .footer_text a {
@@ -194,14 +193,14 @@
      /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
      @media all and (min-width:768px) and (max-width:1023px) {
 	.footer_text {
-        font-size: 18px;
+        font-size: 15px;
         }
     }
 
     /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
     @media all and (max-width:767px) {
         .footer_text {
-            font-size: 15px;
+            font-size: 13px;
         }
     }
 </style>
