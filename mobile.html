@@ -78,13 +78,34 @@
         text-align: center;
         height: 80px;
         z-index: 10;
-        padding: 0 6.6%;
+        /* padding: 0 6.6%; */
 
         border-bottom: solid 1px rgba(242, 243, 245, 1.0);
     }
 
+    /* (해상도 750px ~ 1023px)*/
+    @media all and (min-width:750px) and (max-width:1023px) {
+        .header {
+            padding: 0 50px;
+        }
+    }
+
+    /* (해상도 375px ~ 749px)*/
+    @media all and (min-width:375px) and (max-width:749px) {
+        .header {
+            padding: 0 36px;
+        }
+    }
+
+    /* (해상도 0 ~ 374px)*/
+   @media all and (max-width:374px) {
+        .header {
+            padding: 0 20px;
+        }
+    }
+
     .logo {
-        width: 16%;
+        width: 120px;
     }
 
     .header-text {
@@ -187,17 +208,24 @@
         color: white; /* 링크의 텍스트 색상을 흰색으로 변경합니다 */
     }
 
-     /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
-     @media all and (min-width:768px) and (max-width:1023px) {
-	.footer_text {
-        font-size: 15px;
+    /* (해상도 750px ~ 1023px)*/
+    @media all and (min-width:750px) and (max-width:1023px) {
+        .footer_text {
+            font-size: 15px;
         }
     }
 
-    /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
-    @media all and (max-width:767px) {
+    /* (해상도 375px ~ 749px)*/
+    @media all and (min-width:375px) and (max-width:749px) {
         .footer_text {
             font-size: 13px;
+        }
+    }
+
+    /* (해상도 0 ~ 374px)*/
+   @media all and (max-width:374px) {
+        .footer_text {
+            font-size: 11px;
         }
     }
 </style>
