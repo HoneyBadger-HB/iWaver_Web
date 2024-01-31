@@ -83,34 +83,9 @@
         border-bottom: solid 1px rgba(242, 243, 245, 1.0);
     }
 
-    /* (해상도 750px ~ 1023px)*/
-    @media all and (min-width:750px) and (max-width:1023px) {
-        .header {
-            padding: 0 50px;
-        }
-    }
-
-    /* (해상도 375px ~ 749px)*/
-    @media all and (min-width:375px) and (max-width:749px) {
-        .header {
-            padding: 0 36px;
-        }
-    }
-
-    /* (해상도 0 ~ 374px)*/
-   @media all and (max-width:374px) {
-        .header {
-            padding: 0 20px;
-        }
-    }
-
-    .logo {
-        width: 120px;
-    }
-
     .header-text {
         font-family: "Pretendard-SemiBold";
-        font-size: 17px;
+        /* font-size: 17px; */
         background-color: rgba(90, 129, 250, 0.15);
         color: rgba(90, 129, 250, 1.0);
         border: none;
@@ -119,6 +94,46 @@
         white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     }
 
+    /* (해상도 750px ~ 1023px)*/
+    @media all and (min-width:750px) and (max-width:1023px) {
+        .header {
+            padding: 0 50px;
+        }
+        .logo {
+            width: 120px;
+        }
+        .header-text {
+            font-size: 17px;
+        }
+    }
+
+    /* (해상도 375px ~ 749px)*/
+    @media all and (min-width:375px) and (max-width:749px) {
+        .header {
+            padding: 0 36px;
+        }
+        .logo {
+        width: 100px;
+        }
+        .header-text {
+            font-size: 13px;
+        }
+    }
+
+    /* (해상도 0 ~ 374px)*/
+   @media all and (max-width:374px) {
+        .header {
+            padding: 0 20px;
+        }
+        .logo {
+        width: 80px;
+        }
+        .header-text {
+            font-size: 9px;
+        }
+    }
+
+    
     @font-face {
         font-family: 'Pretendard-SemiBold';
         src: url('./font/Pretendard-SemiBold.ttf') format('truetype');
